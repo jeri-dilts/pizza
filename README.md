@@ -14,6 +14,32 @@ Pizza Pie is a merchant social-esque React App, Airtable build where the user ca
 ![Component Hierarchy](/img/P2_Components.jpg)
 
 ## API and Data Sample
+,,,
+[
+   {
+      "id": "recjN9wzK1glyvWVR",
+      "fields": {
+         "name": "Point Break",
+         "mushrooms": "true",
+         "pepperoni": "false",
+         "onion": "false",
+         "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Greek_pizza_%281%29.jpg/1200px-Greek_pizza_%281%29.jpg"
+      },
+      "createdTime": "2020-12-04T02:48:40.000Z"
+   },
+   {
+      "id": "recr1DG21uwRTclPj",
+      "fields": {
+         "name": "John Wick",
+         "mushrooms": "false",
+         "pepperoni": "false",
+         "onion": "false",
+         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDkWsIInhUeAnK-bvK5LMo_qIbj5kY8yiTcA&usqp=CAU"
+      },
+      "createdTime": "2020-12-04T02:48:40.000Z"
+   }
+]
+,,,
 
 ### MVP/PostMVP
 

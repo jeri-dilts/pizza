@@ -5,5 +5,3 @@ export const config = {
     Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_KEY}`,
   },
 };
-
-// appMZ94zqw7cT0UUw
