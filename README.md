@@ -5,10 +5,10 @@
 Pizza Pie is a merchant social-esque React App, Airtable build where the user can interactively build their own pizza, name it, and place it for order. The homepage will have a main section displaying an empty pizza where the user will have the ability to toggle pizza topping icons that will be animately placed on their pizza. Upon finishing their creation, the user will have the option of naming their pizza via textbox. Upon submisson of the pizza, the user will be taken to a confirmation page that will display their order number and any relevant information about the order. At the top of the homepage there will be a link to a second page where the user can see recently ordered pizzas. Each pizza image will have an 'Order Now' button and display the title of the pizza the user gave it. Ordering from the display page will take the user to the confirmation page. 
 
 ## Wireframes
-[Mobile - Homepage](https://wireframe.cc/HwaLKd)
-[Mobile - Pizza Gallery](https://wireframe.cc/0Mc59r)
-[WebApp - Homepage](https://wireframe.cc/uEOWT8)
-[WebApp - Pizza Gallery](https://wireframe.cc/uiSwxC)
+[Mobile - Homepage](https://wireframe.cc/HwaLKd)  
+[Mobile - Pizza Gallery](https://wireframe.cc/0Mc59r)  
+[WebApp - Homepage](https://wireframe.cc/uEOWT8)  
+[WebApp - Pizza Gallery](https://wireframe.cc/uiSwxC)  
 
 ## Component Hierarchy
 ![Component Hierarchy](/img/P2_Components.jpg)
