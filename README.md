@@ -14,7 +14,7 @@ Pizza Pie is a merchant social-esque React App, Airtable build where the user ca
 ![Component Hierarchy](/img/P2_Components.jpg)
 
 ## API and Data Sample
-,,,
+```
 [
    {
       "id": "recjN9wzK1glyvWVR",
@@ -39,7 +39,7 @@ Pizza Pie is a merchant social-esque React App, Airtable build where the user ca
       "createdTime": "2020-12-04T02:48:40.000Z"
    }
 ]
-,,,
+```
 
 ### MVP/PostMVP
 
