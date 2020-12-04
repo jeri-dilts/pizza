@@ -7,14 +7,14 @@ Pizza Pie is a merchant social-esque React App, Airtable build where the user ca
 ## Wireframes
 
 #### Mobile - Homepage
-![Mobile - Homepage](https://wireframe.cc/HwaLKd)
+Format: ![Mobile - Homepage](https://wireframe.cc/HwaLKd)
 #### Mobile - Pizza Gallery
-![Mobile - Pizza Gallery](https://wireframe.cc/0Mc59r)
+Format: ![Mobile - Pizza Gallery](https://wireframe.cc/0Mc59r)
 
 #### WebApp - Homepage
-![WebApp - Homepage](https://wireframe.cc/uEOWT8)
+Format: ![WebApp - Homepage](https://wireframe.cc/uEOWT8)
 #### WebApp - Pizza Gallery
-![WebApp - Pizza Gallery](https://wireframe.cc/uiSwxC)
+Format: ![WebApp - Pizza Gallery](https://wireframe.cc/uiSwxC)
 
 ## Component Hierarchy
 ![Component Hierarchy](/img/P2_Components.jpg)
