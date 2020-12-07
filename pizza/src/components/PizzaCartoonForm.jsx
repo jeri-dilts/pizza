@@ -44,9 +44,9 @@ function PizzaCartoonForm() {
     await axios.post(baseURL, { fields }, config);
   };
 
-   function toggleClass(e){
+   const toggleClass = (e) =>{
         if(e === false){
-            setBasil(true)
+            setBasil(true) // limited to only setting the Basil state
         }else{
             setBasil(false)
         }
@@ -54,7 +54,7 @@ function PizzaCartoonForm() {
 
   return (
     <div>
-      <form onSubmit="{handleSubmit}">
+      <form onSubmit={handleSubmit}>
         <div className="toppings">
           <input
             type="image"
@@ -63,7 +63,7 @@ function PizzaCartoonForm() {
             alt="basil"
             width="75"
             height="75"
-            value={basil}
+            // value={basil} -- I don't think this is needed here
             onClick={(e) => toggleClass(e.target.value)} // onClick the state is updated by a toggle
           ></input>
           <input
@@ -128,7 +128,7 @@ function PizzaCartoonForm() {
           width="650"
           height="650"
         ></img>
-        <div class="inputBoxStyle">
+        <div className="inputBoxStyle">
           <label htmlFor="name">Pizza Name:</label>
           <input
             name="name"
