@@ -12,52 +12,76 @@ import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
 
-function PizzaCartoonForm() {
 
-  // setting state
+
+/*
+ setting up pizza state
+*/
+function PizzaCartoonForm() {
   const [pizza, setPizza] = useState({
-      basil: false,
-      blackOlives: false,
-      greenPepper: false,
-      mushrooms: false,
-      pepperoni: false,
-      pineapple: false,
-      ham: false,
-      name: '',
-      img: ''
+    basil: false,
+    blackOlives: false,
+    greenPepper: false,
+    mushrooms: false,
+    pepperoni: false,
+    pineapple: false,
+    ham: false,
+    name: "",
+    img: "",
   });
 
+
+  
+  // handling the submission of pizza
+  // sending pizza data to Airtable via POST with axios
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // create a field object, to sent to airtable
     const fields = {
-      basil : pizza.basil,
+      name: pizza.name,
+      basil: pizza.basil,
       blackOlives: pizza.blackOlives,
       greenPepper: pizza.greenPepper,
       mushrooms: pizza.mushrooms,
       pepperoni: pizza.pepperoni,
       pineapple: pizza.pineapple,
       ham: pizza.ham,
-      name: pizza.name,
-      img: pizza.img
+      img: pizza.img,
     };
-    // make our axios request
-    // await axios.post(baseURL, { fields }, config);
+    // axios request
+    await axios.post(baseURL, { fields }, config);
   };
 
-   const toggle = (bool,topping) =>{
-        if(bool === false){
-            setPizza((prev)=>({
-               ...prev,[topping]:true // return an object, don't want to overwrite previous state
-            }))
-            
-        }else{
-            setPizza((prev)=>({
-                ...prev,[topping]:false
-        }))
+
+
+  // toggle function for pizza topping icons
+  const toggle = (e, bool, topping) => {
+    e.preventDefault();
+
+    if (bool === false) {
+      setPizza((prev) => ({
+        ...prev, // return an object, don't want to overwrite previous state (prev)
+        [topping]: true,
+      }));
+    } else {
+      setPizza((prev) => ({
+        ...prev,
+        [topping]: false,
+      }));
     }
-   }
+  };
+
+
+
+  // function to update the name of the pizza in state
+  const updateName = (e) => {
+    e.preventDefault();
+    setPizza((prev) => ({
+      ...prev,
+      name: e.target.value,
+    }));
+  };
 
   return (
     <div>
@@ -70,7 +94,7 @@ function PizzaCartoonForm() {
             alt="basil"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.basil,'basil')} // onClick the state is updated by a toggle
+            onClick={(e) => toggle(e, pizza.basil, "basil")} // onClick the state is updated by a toggle
           ></input>
           <input
             type="image"
@@ -79,7 +103,7 @@ function PizzaCartoonForm() {
             alt="blackOlives"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.blackOlives,'blackOlives')}
+            onClick={(e) => toggle(e, pizza.blackOlives, "blackOlives")}
           ></input>
           <input
             type="image"
@@ -88,7 +112,7 @@ function PizzaCartoonForm() {
             alt="greenPepper"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.greenPepper,'greenPepper')}
+            onClick={(e) => toggle(e, pizza.greenPepper, "greenPepper")}
           ></input>
           <input
             type="image"
@@ -97,7 +121,7 @@ function PizzaCartoonForm() {
             alt="mushroom"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.mushrooms,'mushrooms')}
+            onClick={(e) => toggle(e, pizza.mushrooms, "mushrooms")}
           ></input>
           <input
             type="image"
@@ -106,7 +130,7 @@ function PizzaCartoonForm() {
             alt="pepperoni"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.pepperoni,'pepperoni')}
+            onClick={(e) => toggle(e, pizza.pepperoni, "pepperoni")}
           ></input>
           <input
             type="image"
@@ -115,7 +139,7 @@ function PizzaCartoonForm() {
             alt="pineapple"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.pineapple,'pineapple')}
+            onClick={(e) => toggle(e, pizza.pineapple, "pineapple")}
           ></input>
           <input
             type="image"
@@ -124,7 +148,7 @@ function PizzaCartoonForm() {
             alt="ham"
             width="75"
             height="75"
-            onClick={() => toggle(pizza.ham,'ham')}
+            onClick={(e) => toggle(e, pizza.ham, "ham")}
           ></input>
         </div>
         <img
@@ -139,8 +163,8 @@ function PizzaCartoonForm() {
           <input
             name="name"
             type="text"
-            value='Name Your Pizza Here!'
-            // onChange={(e) => setName(e.target.value)}
+            value={pizza.name}
+            onChange={(e) => updateName(e)}
           />
         </div>
         <button type="submit" className="buttonStyle">
