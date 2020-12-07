@@ -165,6 +165,7 @@ function PizzaForm() {
           Order This Beautiful Pizza Creation
         </button>
       </form>
+      {/* <Animations bool='true'/> */}
     </div>
   );
 }
