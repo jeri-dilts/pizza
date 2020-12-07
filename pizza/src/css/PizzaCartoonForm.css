@@ -1,0 +1,45 @@
+#cheesePizza{
+    /* border: 1px solid red; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .toppings{
+    /* border: 1px solid red; */
+    text-align: center;
+    margin-top: 20px
+  }
+  .singleTopping{
+    /* border: 1px solid red; */
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px; 
+    animation-name: toppingSelected;
+    animation-duration: 4s;
+  }
+  .buttonStyle{
+    text-align: center;
+    margin:0 auto; /* centers button */
+    display:block; /* centers button */
+    margin-bottom: 50px;
+  }
+ .inputBoxStyle{
+    text-align: center;
+    margin:0 auto; /* centers button */
+    display:block; /* centers button */
+ }
+
+  .zoom{
+    transition: transform .2s; /* Animation */
+  }
+  .zoom:hover {
+    transform: scale(2.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+  
+  /* The animation code */
+  @keyframes toppingSelected {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
