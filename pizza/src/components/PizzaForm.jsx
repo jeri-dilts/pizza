@@ -1,5 +1,5 @@
 // something about Webpack and multi-image handling
-import "../css/PizzaCartoonForm.css";
+import "../css/PizzaForm.css";
 import cheesePizza from "../img/cheesePizzaCropped.png";
 import basilPic from "../img/basil.png";
 import blackOlivesPic from "../img/blackOlives.png";
@@ -11,10 +11,10 @@ import hamPic from "../img/ham.png";
 import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
-import PizzaToppingPlacement from "../components/PizzaToppingPlacement"
+import Animations from "../components/Animations"
 
 //setting up pizza state
-function PizzaCartoonForm() {
+function PizzaForm() {
   const [pizza, setPizza] = useState({
     basil: false,
     blackOlives: false,
@@ -55,14 +55,17 @@ function PizzaCartoonForm() {
 
     if (bool === false) {
       setPizza((prev) => ({
-        ...prev, // return an object, don't want to overwrite previous state (prev)
+        ...prev, // ** return an object, don't want to overwrite previous state (prev)
         [topping]: true,
       }));
+      <Animations bool='true' topping={topping}/>  //display topping
     } else {
       setPizza((prev) => ({
         ...prev,
         [topping]: false,
+        
       }));
+      <Animations bool='false' topping={topping}/>  //remove topping
     }
   };
 
@@ -162,12 +165,11 @@ function PizzaCartoonForm() {
           Order This Beautiful Pizza Creation
         </button>
       </form>
-      <PizzaToppingPlacement />
     </div>
   );
 }
 
-export default PizzaCartoonForm;
+export default PizzaForm;
 
 // credit:
 // <a href="https://www.vecteezy.com/free-vector/pizza-toppings">Pizza Toppings Vectors by Vecteezy</a> */
