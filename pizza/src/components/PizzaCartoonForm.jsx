@@ -13,15 +13,16 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 
 function PizzaCartoonForm() {
+
   // setting state
-  const [basil, setBasil] = useState("");
-  const [blackOlives, setBlackOlives] = useState("");
-  const [greenPepper, setGreenPepper] = useState("");
-  const [mushrooms, setMushrooms] = useState("");
-  const [pepperoni, setPepperoni] =  useState("");
-  const [pineapple, setPineapple] = useState("");
-  const [ham, setHam] = useState("");
-  const [name, setName] = useState("");
+  const [basil, setBasil] = useState(false);
+  const [blackOlives, setBlackOlives] = useState(false);
+  const [greenPepper, setGreenPepper] = useState(false);
+  const [mushrooms, setMushrooms] = useState(false);
+  const [pepperoni, setPepperoni] =  useState(false);
+  const [pineapple, setPineapple] = useState(false);
+  const [ham, setHam] = useState(false);
+  const [name, setName] = useState(false);
 //   const [img, setImg] = useState("");
 
   const handleSubmit = async (e) => {
@@ -43,6 +44,14 @@ function PizzaCartoonForm() {
     await axios.post(baseURL, { fields }, config);
   };
 
+   function toggleClass(e){
+        if(e === false){
+            setBasil(true)
+        }else{
+            setBasil(false)
+        }
+    }
+
   return (
     <div>
       <form onSubmit="{handleSubmit}">
@@ -55,6 +64,7 @@ function PizzaCartoonForm() {
             width="75"
             height="75"
             value={basil}
+            onClick={(e) => toggleClass(e.target.value)} // onClick the state is updated by a toggle
           ></input>
           <input
             type="image"
