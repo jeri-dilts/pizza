@@ -1,4 +1,4 @@
-#cheesePizza{
+.cheesePizza{
     /* border: 1px solid red; */
     display: block;
     margin-left: auto;
@@ -6,12 +6,12 @@
     margin-top: 20px;
     margin-bottom: 50px;
   }
-  .toppings{
+  .toppingsToggle{
     /* border: 1px solid red; */
     text-align: center;
     margin-top: 20px
   }
-  .singleTopping{
+  .singleToppingToggle{
     /* border: 1px solid red; */
     display: inline;
     margin-left: 20px;
@@ -25,7 +25,7 @@
     display:block; /* centers button */
     margin-bottom: 50px;
   }
- .inputBoxStyle{
+ .inputBox{
     text-align: center;
     margin:0 auto; /* centers button */
     display:block; /* centers button */

@@ -11,12 +11,9 @@ import hamPic from "../img/ham.png";
 import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
+import PizzaToppingPlacement from "../components/PizzaToppingPlacement"
 
-
-
-/*
- setting up pizza state
-*/
+//setting up pizza state
 function PizzaCartoonForm() {
   const [pizza, setPizza] = useState({
     basil: false,
@@ -30,8 +27,6 @@ function PizzaCartoonForm() {
     img: "",
   });
 
-
-  
   // handling the submission of pizza
   // sending pizza data to Airtable via POST with axios
   const handleSubmit = async (e) => {
@@ -50,10 +45,9 @@ function PizzaCartoonForm() {
       img: pizza.img,
     };
     // axios request
+    console.log({fields});
     await axios.post(baseURL, { fields }, config);
   };
-
-
 
   // toggle function for pizza topping icons
   const toggle = (e, bool, topping) => {
@@ -72,8 +66,6 @@ function PizzaCartoonForm() {
     }
   };
 
-
-
   // function to update the name of the pizza in state
   const updateName = (e) => {
     e.preventDefault();
@@ -86,10 +78,10 @@ function PizzaCartoonForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div className="toppings">
+        <div className="toppingsToggle">
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={basilPic}
             alt="basil"
             width="75"
@@ -98,7 +90,7 @@ function PizzaCartoonForm() {
           ></input>
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={blackOlivesPic}
             alt="blackOlives"
             width="75"
@@ -107,7 +99,7 @@ function PizzaCartoonForm() {
           ></input>
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={greenPepperPic}
             alt="greenPepper"
             width="75"
@@ -116,7 +108,7 @@ function PizzaCartoonForm() {
           ></input>
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={mushroomPic}
             alt="mushroom"
             width="75"
@@ -125,7 +117,7 @@ function PizzaCartoonForm() {
           ></input>
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={pepperoniPic}
             alt="pepperoni"
             width="75"
@@ -134,7 +126,7 @@ function PizzaCartoonForm() {
           ></input>
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={pineapplePic}
             alt="pineapple"
             width="75"
@@ -143,7 +135,7 @@ function PizzaCartoonForm() {
           ></input>
           <input
             type="image"
-            className="zoom singleTopping"
+            className="zoom singleToppingToggle"
             src={hamPic}
             alt="ham"
             width="75"
@@ -151,14 +143,13 @@ function PizzaCartoonForm() {
             onClick={(e) => toggle(e, pizza.ham, "ham")}
           ></input>
         </div>
-        <img
-          id="cheesePizza"
+        <img className="cheesePizza"
           src={cheesePizza}
           alt="cheese pizza"
           width="650"
           height="650"
         ></img>
-        <div className="inputBoxStyle">
+        <div className="inputBox">
           <label htmlFor="name"></label>
           <input
             name="name"
@@ -167,10 +158,11 @@ function PizzaCartoonForm() {
             onChange={(e) => updateName(e)}
           />
         </div>
-        <button type="submit" className="buttonStyle">
+        <button className="buttonStyle" type="submit" >
           Order This Beautiful Pizza Creation
         </button>
       </form>
+      <PizzaToppingPlacement />
     </div>
   );
 }
