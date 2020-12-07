@@ -15,40 +15,43 @@ import { baseURL, config } from "../services";
 function PizzaCartoonForm() {
 
   // setting state
-  const [basil, setBasil] = useState(false);
-  const [blackOlives, setBlackOlives] = useState(false);
-  const [greenPepper, setGreenPepper] = useState(false);
-  const [mushrooms, setMushrooms] = useState(false);
-  const [pepperoni, setPepperoni] =  useState(false);
-  const [pineapple, setPineapple] = useState(false);
-  const [ham, setHam] = useState(false);
-  const [name, setName] = useState(false);
-//   const [img, setImg] = useState("");
+  const [pizza, setPizza] = useState({
+      basil: false,
+      blackOlives: false,
+      greenPepper: false,
+      mushrooms: false,
+      pepperoni: false,
+      pineapple: false,
+      ham: false,
+      name: '',
+      img: ''
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // create a field object, to sent to airtable
     const fields = {
-      name: name, // property shorthand
-      basil,
-      blackOlives,
-      greenPepper,
-      mushrooms,
-      pepperoni,
-      pineapple,
-      ham,
-    //   img
+      basil : pizza.basil,
+      blackOlives: pizza.blackOlives,
+      greenPepper: pizza.greenPepper,
+      mushrooms: pizza.mushrooms,
+      pepperoni: pizza.pepperoni,
+      pineapple: pizza.pineapple,
+      ham: pizza.ham,
+      name: pizza.name,
+      img: pizza.img
     };
     // make our axios request
-    await axios.post(baseURL, { fields }, config);
+    // await axios.post(baseURL, { fields }, config);
   };
 
-   const toggleClass = (e) =>{
-        if(e === false){
-            setBasil(true) // limited to only setting the Basil state
+   const toggle = (bool,topping) =>{
+        
+        if(bool === false){
+            setPizza.topping({topping:true}) // limited to only setting the Basil state
         }else{
-            setBasil(false)
+            setPizza({topping:false})
         }
     }
 
@@ -63,8 +66,7 @@ function PizzaCartoonForm() {
             alt="basil"
             width="75"
             height="75"
-            // value={basil} -- I don't think this is needed here
-            onClick={(e) => toggleClass(e.target.value)} // onClick the state is updated by a toggle
+            onClick={() => toggle(pizza.basil,'basil')} // onClick the state is updated by a toggle
           ></input>
           <input
             type="image"
@@ -73,7 +75,6 @@ function PizzaCartoonForm() {
             alt="blackOlives"
             width="75"
             height="75"
-            value={blackOlives}
           ></input>
           <input
             type="image"
@@ -82,7 +83,6 @@ function PizzaCartoonForm() {
             alt="greenPepper"
             width="75"
             height="75"
-            value={greenPepper}
           ></input>
           <input
             type="image"
@@ -91,7 +91,6 @@ function PizzaCartoonForm() {
             alt="mushroom"
             width="75"
             height="75"
-            value={mushrooms}
           ></input>
           <input
             type="image"
@@ -100,7 +99,6 @@ function PizzaCartoonForm() {
             alt="pepperoni"
             width="75"
             height="75"
-            value={pepperoni}
           ></input>
           <input
             type="image"
@@ -109,7 +107,6 @@ function PizzaCartoonForm() {
             alt="pineapple"
             width="75"
             height="75"
-            value={pineapplePic}
           ></input>
           <input
             type="image"
@@ -118,7 +115,6 @@ function PizzaCartoonForm() {
             alt="ham"
             width="75"
             height="75"
-            value={ham}
           ></input>
         </div>
         <img
@@ -133,11 +129,11 @@ function PizzaCartoonForm() {
           <input
             name="name"
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={pizza.name}
+            // onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <button type="submit" class="buttonStyle">
+        <button type="submit" className="buttonStyle">
           Order This Beautiful Pizza Creation
         </button>
       </form>
