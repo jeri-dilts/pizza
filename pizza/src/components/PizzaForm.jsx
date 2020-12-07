@@ -58,14 +58,15 @@ function PizzaForm() {
         ...prev, // ** return an object, don't want to overwrite previous state (prev)
         [topping]: true,
       }));
-      <Animations bool='true' topping={topping}/>  //display topping
+      <Animations bool={true} topping={topping}/>  //display topping
+      // set up state to track animation show/hide
+      // conditionally render animation in jsx based on state
     } else {
       setPizza((prev) => ({
         ...prev,
         [topping]: false,
-        
       }));
-      <Animations bool='false' topping={topping}/>  //remove topping
+      <Animations bool={false} topping={topping}/>  //remove topping
     }
   };
 
