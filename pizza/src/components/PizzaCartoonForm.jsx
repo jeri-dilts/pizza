@@ -47,13 +47,17 @@ function PizzaCartoonForm() {
   };
 
    const toggle = (bool,topping) =>{
-        
         if(bool === false){
-            setPizza.topping({topping:true}) // limited to only setting the Basil state
+            setPizza((prev)=>({
+               ...prev,[topping]:true // return an object, don't want to overwrite previous state
+            }))
+            
         }else{
-            setPizza({topping:false})
-        }
+            setPizza((prev)=>({
+                ...prev,[topping]:false
+        }))
     }
+   }
 
   return (
     <div>
@@ -75,6 +79,7 @@ function PizzaCartoonForm() {
             alt="blackOlives"
             width="75"
             height="75"
+            onClick={() => toggle(pizza.blackOlives,'blackOlives')}
           ></input>
           <input
             type="image"
@@ -83,6 +88,7 @@ function PizzaCartoonForm() {
             alt="greenPepper"
             width="75"
             height="75"
+            onClick={() => toggle(pizza.greenPepper,'greenPepper')}
           ></input>
           <input
             type="image"
@@ -91,6 +97,7 @@ function PizzaCartoonForm() {
             alt="mushroom"
             width="75"
             height="75"
+            onClick={() => toggle(pizza.mushrooms,'mushrooms')}
           ></input>
           <input
             type="image"
@@ -99,6 +106,7 @@ function PizzaCartoonForm() {
             alt="pepperoni"
             width="75"
             height="75"
+            onClick={() => toggle(pizza.pepperoni,'pepperoni')}
           ></input>
           <input
             type="image"
@@ -107,6 +115,7 @@ function PizzaCartoonForm() {
             alt="pineapple"
             width="75"
             height="75"
+            onClick={() => toggle(pizza.pineapple,'pineapple')}
           ></input>
           <input
             type="image"
@@ -115,6 +124,7 @@ function PizzaCartoonForm() {
             alt="ham"
             width="75"
             height="75"
+            onClick={() => toggle(pizza.ham,'ham')}
           ></input>
         </div>
         <img
@@ -125,11 +135,11 @@ function PizzaCartoonForm() {
           height="650"
         ></img>
         <div className="inputBoxStyle">
-          <label htmlFor="name">Pizza Name:</label>
+          <label htmlFor="name"></label>
           <input
             name="name"
             type="text"
-            value={pizza.name}
+            value='Name Your Pizza Here!'
             // onChange={(e) => setName(e.target.value)}
           />
         </div>
