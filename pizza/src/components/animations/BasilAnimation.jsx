@@ -1,4 +1,4 @@
-import "../../css/BasilAnimation.css";
+import "../../css/animations/BasilAnimation.css";
 import basilPic from "../../img/basil.png";
 
 function BasilAnimation() {

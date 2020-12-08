@@ -11,7 +11,7 @@ import hamPic from "../img/ham.png";
 import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
-import Animations from "../components/Animations";
+import AnimationsMain from "./AnimationsMain";
 
 function PizzaForm() {
   //setting up pizza state
@@ -89,7 +89,7 @@ function PizzaForm() {
             height="75"
             onClick={(e)=>{
               toggle(e, pizza.basil, "basil");
-              <Animations animation={animation} topping="basil" />
+              <AnimationsMain animation={animation} topping="basil" />
             }}
           ></input>
           <input
