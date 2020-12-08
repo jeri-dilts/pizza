@@ -1,6 +1,7 @@
 import axios from "axios";
 import { baseURL, config } from "../services";
 import { useState, useEffect } from "react";
+import CreatedPizzaView from "./CreatedPizzaView"
 
 function GalleryPage() {
 
@@ -14,17 +15,19 @@ function GalleryPage() {
 
     const getPizzas = async () => {
       const resp = await axios.get(baseURL, config);
+      // const resp = await axios.get(baseURL, config, {
+      //   params: {
+      //     _limit: 5
+      //   }
+      // })
       setPizzas(resp.data.records);
     };
     getPizzas();
   }, [toggleFetch]);
 
     return (
-    <div>{
-        pizzas.map((pizza, i)=>(
-            <p key={i}>{pizza.fields.name}</p>
-        ))
-    }
+    <div>
+      <CreatedPizzaView pizzas={pizzas}/>
     </div>
     )
 }

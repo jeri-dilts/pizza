@@ -166,11 +166,11 @@ function PizzaForm() {
           />
         </div>
         {/* Is this the proper way to navigate to a new page? Should I use onClick? */}
-        <Link to="/order_confirmation">
+        {/* <Link to="/order_confirmation"> */}
           <button className="buttonStyle" type="submit">
             Order This Beautiful Pizza Creation
           </button>
-        </Link>
+        {/* </Link> */}
       </form>
     </div>
   );
