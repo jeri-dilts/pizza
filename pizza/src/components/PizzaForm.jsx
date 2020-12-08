@@ -12,6 +12,7 @@ import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import AnimationsMain from "./AnimationsMain";
+import ConfirmationPage from "./ConfirmationPage"
 
 
 
@@ -164,7 +165,7 @@ function PizzaForm() {
             onChange={(e) => updateName(e)}
           />
         </div>
-        <button className="buttonStyle" type="submit">
+        <button className="buttonStyle" type="submit" onClick={()=><ConfirmationPage />}>
           Order This Beautiful Pizza Creation
         </button>
       </form>
