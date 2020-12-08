@@ -156,6 +156,7 @@ function PizzaForm() {
         {pizza.mushrooms && <AnimationsMain topping="mushroom" />}
         {pizza.pepperoni && <AnimationsMain topping="pepperoni" />}
         {pizza.pineapple && <AnimationsMain topping="pineapple" />}
+        {pizza.ham && <AnimationsMain topping="ham" />}
         <div className="inputBox">
           <label htmlFor="name"></label>
           <input
