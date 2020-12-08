@@ -13,6 +13,8 @@ import axios from "axios";
 import { baseURL, config } from "../services";
 import AnimationsMain from "./AnimationsMain";
 
+
+
 function PizzaForm() {
   //setting up pizza state
   const [pizza, setPizza] = useState({
@@ -26,8 +28,6 @@ function PizzaForm() {
     name: "",
     img: "",
   });
-
-  const [animation, setAnimation] = useState(false); // animation state
 
   // sending pizza data to Airtable via POST with axios via submit
   const handleSubmit = async (e) => {
@@ -57,13 +57,11 @@ function PizzaForm() {
         ...prev, // ** return an object, don't want to overwrite previous state (prev)
         [topping]: true,
       }));
-      setAnimation(true);
     } else {
       setPizza((prev) => ({
         ...prev,
         [topping]: false,
       }));
-      setAnimation(false);
     }
   };
 
@@ -87,13 +85,10 @@ function PizzaForm() {
             alt="basil"
             width="75"
             height="75"
-            onClick={(e)=>{
-              toggle(e, pizza.basil, "basil");
-              <AnimationsMain animation={animation} topping="basil" />
-            }}
+            onClick={(e) => toggle(e, pizza.basil, "basil")}
           ></input>
           <input
-            type="image"
+            type="image"  
             className="zoom singleToppingToggle"
             src={blackOlivesPic}
             alt="blackOlives"
@@ -154,6 +149,11 @@ function PizzaForm() {
           width="650"
           height="650"
         ></img>
+        {/* ANIMATIONS */}
+        {pizza.basil && <AnimationsMain topping="basil" />}{/* a guard operator */}
+        {pizza.blackOlives && <AnimationsMain topping="blackOlives" />}
+        {pizza.greenPepper && <AnimationsMain topping="greenPepper" />}
+        {pizza.mushrooms && <AnimationsMain topping="mushroom" />}
         <div className="inputBox">
           <label htmlFor="name"></label>
           <input
