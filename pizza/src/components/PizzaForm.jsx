@@ -170,8 +170,6 @@ function PizzaForm() {
           Order This Beautiful Pizza Creation
         </button>
       </form>
-      {/* show or hide display topping based on animation state */}
-      {/* <Animations animation={animation} topping={toppingHolder}/>  */}
     </div>
   );
 }
