@@ -26,7 +26,6 @@ function PizzaForm() {
     pineapple: false,
     ham: false,
     name: "",
-    img: "",
   });
 
   // sending pizza data to Airtable via POST with axios via submit
@@ -43,7 +42,6 @@ function PizzaForm() {
       pepperoni: pizza.pepperoni,
       pineapple: pizza.pineapple,
       ham: pizza.ham,
-      img: pizza.img,
     };
     await axios.post(baseURL, { fields }, config); // axios request
   };
