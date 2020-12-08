@@ -11,10 +11,10 @@ import hamPic from "../img/ham.png";
 import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
-import Animations from "../components/Animations"
+import Animations from "../components/Animations";
 
-//setting up pizza state
 function PizzaForm() {
+  //setting up pizza state
   const [pizza, setPizza] = useState({
     basil: false,
     blackOlives: false,
@@ -27,8 +27,9 @@ function PizzaForm() {
     img: "",
   });
 
-  // handling the submission of pizza
-  // sending pizza data to Airtable via POST with axios
+  const [animation, setAnimation] = useState(false); // animation state
+
+  // sending pizza data to Airtable via POST with axios via submit
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -44,9 +45,7 @@ function PizzaForm() {
       ham: pizza.ham,
       img: pizza.img,
     };
-    // axios request
-    console.log({fields});
-    await axios.post(baseURL, { fields }, config);
+    await axios.post(baseURL, { fields }, config); // axios request
   };
 
   // toggle function for pizza topping icons
@@ -58,15 +57,13 @@ function PizzaForm() {
         ...prev, // ** return an object, don't want to overwrite previous state (prev)
         [topping]: true,
       }));
-      <Animations bool={true} topping={topping}/>  //display topping
-      // set up state to track animation show/hide
-      // conditionally render animation in jsx based on state
+      setAnimation(true);
     } else {
       setPizza((prev) => ({
         ...prev,
         [topping]: false,
       }));
-      <Animations bool={false} topping={topping}/>  //remove topping
+      setAnimation(false);
     }
   };
 
@@ -90,7 +87,10 @@ function PizzaForm() {
             alt="basil"
             width="75"
             height="75"
-            onClick={(e) => toggle(e, pizza.basil, "basil")} // onClick the state is updated by a toggle
+            onClick={(e)=>{
+              toggle(e, pizza.basil, "basil");
+              <Animations animation={animation} topping="basil" />
+            }}
           ></input>
           <input
             type="image"
@@ -147,7 +147,8 @@ function PizzaForm() {
             onClick={(e) => toggle(e, pizza.ham, "ham")}
           ></input>
         </div>
-        <img className="cheesePizza"
+        <img
+          className="cheesePizza"
           src={cheesePizza}
           alt="cheese pizza"
           width="650"
@@ -162,11 +163,12 @@ function PizzaForm() {
             onChange={(e) => updateName(e)}
           />
         </div>
-        <button className="buttonStyle" type="submit" >
+        <button className="buttonStyle" type="submit">
           Order This Beautiful Pizza Creation
         </button>
       </form>
-      {/* <Animations bool='true'/> */}
+      {/* show or hide display topping based on animation state */}
+      {/* <Animations animation={animation} topping={toppingHolder}/>  */}
     </div>
   );
 }
