@@ -144,21 +144,23 @@ function PizzaForm() {
             onClick={(e) => toggle(e, pizza.ham, "ham")}
           ></input>
         </div>
-        <img
-            className="cheesePizza"
-            src={cheesePizza}
-            alt="cheese pizza"
-            width="650"
-            height="650"
-        ></img>
-        {/* ANIMATIONS */}
-        {pizza.basil && <AnimationsMain topping="basil" />}{/* a guard operator */}
-        {pizza.blackOlives && <AnimationsMain topping="blackOlives" />}
-        {pizza.greenPepper && <AnimationsMain topping="greenPepper" />}
-        {pizza.mushrooms && <AnimationsMain topping="mushroom" />}
-        {pizza.pepperoni && <AnimationsMain topping="pepperoni" />}
-        {pizza.pineapple && <AnimationsMain topping="pineapple" />}
-        {pizza.ham && <AnimationsMain topping="ham" />}
+        <div class="container">
+          <img
+              className="cheesePizza"
+              src={cheesePizza}
+              alt="cheese pizza"
+              width="650"
+              height="650"
+          ></img>
+          {/* ANIMATIONS */}
+          {pizza.basil && <AnimationsMain topping="basil" />}{/* a guard operator */}
+          {pizza.blackOlives && <AnimationsMain topping="blackOlives" />}
+          {pizza.greenPepper && <AnimationsMain topping="greenPepper" />}
+          {pizza.mushrooms && <AnimationsMain topping="mushroom" />}
+          {pizza.pepperoni && <AnimationsMain topping="pepperoni" />}
+          {pizza.pineapple && <AnimationsMain topping="pineapple" />}
+          {pizza.ham && <AnimationsMain topping="ham" />}
+        </div>
         <div className="inputBox">
           <label htmlFor="name"></label>
           <input

@@ -1,6 +1,9 @@
+.container{
+  position: relative;
+}
+
 .cheesePizza{
     /* border: 1px solid red; */
-    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;

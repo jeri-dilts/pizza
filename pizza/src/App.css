@@ -10,12 +10,16 @@
   text-align: center;
   text-decoration: none;
 }
+.sub_link>h3{
+  margin: 0;
+}
 .sub_link{
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
   text-align: center;
   text-decoration: none;
-  margin: 0; /* this isn't working */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .sub_link:hover{
   color: green;
