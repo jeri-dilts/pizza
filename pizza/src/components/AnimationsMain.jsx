@@ -10,7 +10,7 @@ function AnimationsMain(props) {
   // would like to destructure props for fun
 
   return (
-    <div>
+    <div className="placingToppings">
       {props.topping === "basil" && <BasilAnimation />}
       {props.topping === "blackOlives" && <BlackOliveAnimation />}
       {props.topping === "greenPepper" && <GreenPepperAnimation />}

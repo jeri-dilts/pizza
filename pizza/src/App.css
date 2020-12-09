@@ -4,17 +4,19 @@
 .App {
   text-align: center;
 }
-header{
-  /* border: 1px solid red; */
+.header{
   font-family: 'Nerko One', cursive;
   font-size: 75px;
   text-align: center;
+  text-decoration: none;
 }
-h3{
-  /* border: 1px solid red; */
+.sub_link{
   font-family: 'Open Sans', sans-serif;
   font-size: 22px;
   text-align: center;
-  margin: 0px;
-  margin-bottom: 25px;
+  text-decoration: none;
+  margin: 0; /* this isn't working */
+}
+.sub_link:hover{
+  color: green;
 }

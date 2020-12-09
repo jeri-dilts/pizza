@@ -145,11 +145,11 @@ function PizzaForm() {
           ></input>
         </div>
         <img
-          className="cheesePizza"
-          src={cheesePizza}
-          alt="cheese pizza"
-          width="650"
-          height="650"
+            className="cheesePizza"
+            src={cheesePizza}
+            alt="cheese pizza"
+            width="650"
+            height="650"
         ></img>
         {/* ANIMATIONS */}
         {pizza.basil && <AnimationsMain topping="basil" />}{/* a guard operator */}
@@ -168,12 +168,9 @@ function PizzaForm() {
             onChange={(e) => updateName(e)}
           />
         </div>
-        {/* Is this the proper way to navigate to a new page? Should I use onClick? */}
-        {/* <Link to="/order_confirmation"> */}
           <button className="buttonStyle" type="submit">
             Order This Beautiful Pizza Creation
           </button>
-        {/* </Link> */}
       </form>
     </div>
   );

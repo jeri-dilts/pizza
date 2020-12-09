@@ -1,18 +1,4 @@
-/* The animation code */
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes hide {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+.placingToppings{
+  position: absolute;
+  z-index: 1;
 }
