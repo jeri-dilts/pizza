@@ -28,7 +28,6 @@
   top: 55%;
   left: 33%;
 }
-
-/* Is it better to generate a random number based on the pizza range? */
-/* side limits (Left) 25%-65% */
-/* top limit 10-80 */
+.mushroom{
+  width: 8%;
+}

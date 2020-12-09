@@ -7,7 +7,6 @@ import greenPepperPic from "../img/greenPepper.png";
 import mushroomPic from "../img/mushroom.png";
 import pepperoniPic from "../img/pepperoni.png";
 import pineapplePic from "../img/pineapple.png";
-import hamPic from "../img/ham.png";
 import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
@@ -85,8 +84,6 @@ function PizzaForm() {
             className="zoom singleToppingToggle"
             src={basilPic}
             alt="basil"
-            width="75"
-            height="75"
             onClick={(e) => toggle(e, pizza.basil, "basil")}
           ></input>
           <input
@@ -94,8 +91,6 @@ function PizzaForm() {
             className="zoom singleToppingToggle"
             src={blackOlivesPic}
             alt="blackOlives"
-            width="75"
-            height="75"
             onClick={(e) => toggle(e, pizza.blackOlives, "blackOlives")}
           ></input>
           <input
@@ -103,8 +98,6 @@ function PizzaForm() {
             className="zoom singleToppingToggle"
             src={greenPepperPic}
             alt="greenPepper"
-            width="75"
-            height="75"
             onClick={(e) => toggle(e, pizza.greenPepper, "greenPepper")}
           ></input>
           <input
@@ -121,8 +114,6 @@ function PizzaForm() {
             className="zoom singleToppingToggle"
             src={pepperoniPic}
             alt="pepperoni"
-            width="75"
-            height="75"
             onClick={(e) => toggle(e, pizza.pepperoni, "pepperoni")}
           ></input>
           <input
@@ -130,18 +121,7 @@ function PizzaForm() {
             className="zoom singleToppingToggle"
             src={pineapplePic}
             alt="pineapple"
-            width="75"
-            height="75"
             onClick={(e) => toggle(e, pizza.pineapple, "pineapple")}
-          ></input>
-          <input
-            type="image"
-            className="zoom singleToppingToggle"
-            src={hamPic}
-            alt="ham"
-            width="75"
-            height="75"
-            onClick={(e) => toggle(e, pizza.ham, "ham")}
           ></input>
         </div>
         <div class="container">
@@ -149,8 +129,6 @@ function PizzaForm() {
               className="cheesePizza"
               src={cheesePizza}
               alt="cheese pizza"
-              width="650"
-              height="650"
           ></img>
           {/* ANIMATIONS */}
           {pizza.basil && <AnimationsMain topping="basil" />}{/* a guard operator */}
@@ -159,13 +137,13 @@ function PizzaForm() {
           {pizza.mushrooms && <AnimationsMain topping="mushroom" />}
           {pizza.pepperoni && <AnimationsMain topping="pepperoni" />}
           {pizza.pineapple && <AnimationsMain topping="pineapple" />}
-          {pizza.ham && <AnimationsMain topping="ham" />}
         </div>
         <div className="inputBox">
           <label htmlFor="name"></label>
           <input
             name="name"
             type="text"
+            placeholder="Name Your Pizza"
             value={pizza.name}
             onChange={(e) => updateName(e)}
           />

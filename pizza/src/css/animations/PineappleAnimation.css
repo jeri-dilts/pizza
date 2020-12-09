@@ -28,7 +28,6 @@
   top: 42%;
   left: 63%;
 }
-
-/* Is it better to generate a random number based on the pizza range? */
-/* side limits (Left) 25%-65% */
-/* top limit 10-80 */
+.pineapple{
+  width: 8%;
+}

@@ -1,9 +1,6 @@
 import cheesePizza from "../img/cheesePizzaCropped.png";
 
 function CreatedPizzaView(props){
-
-
-
     
     return <div>
         <div>
