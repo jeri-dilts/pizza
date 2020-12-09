@@ -12,7 +12,7 @@ import { useState } from "react";
 import axios from "axios";
 import { baseURL, config } from "../services";
 import AnimationsMain from "./AnimationsMain";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 
 
@@ -28,6 +28,8 @@ function PizzaForm() {
     ham: false,
     name: "",
   });
+
+  const history = useHistory();
 
   // sending pizza data to Airtable via POST with axios via submit
   const handleSubmit = async (e) => {
@@ -45,6 +47,7 @@ function PizzaForm() {
       ham: pizza.ham,
     };
     await axios.post(baseURL, { fields }, config); // axios request
+    history.push("/order_confirmation")
   };
 
   // toggle function for pizza topping icons

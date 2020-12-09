@@ -1,11 +1,22 @@
+import cheesePizza from "../img/cheesePizzaCropped.png";
+
 function CreatedPizzaView(props){
-    // console.log(props.pizzas[0])
+
+
+
+    
     return <div>
-        {
-        props.pizzas.map((pizza, i)=>(
-            <p key={i}>{pizza.fields.name}</p>
-            ))
-        }
+        <div>
+            <img
+            className="cheesePizza"
+            src={cheesePizza}
+            alt="cheese pizza"
+            width="650"
+            height="650"
+            ></img>
+        </div>
+        {/* {props.pizza.fields.name} */}
+    
     </div>
 }
 

@@ -14,20 +14,20 @@ function GalleryPage() {
     useEffect(() => {
 
     const getPizzas = async () => {
-      const resp = await axios.get(baseURL, config);
-      // const resp = await axios.get(baseURL, config, {
-      //   params: {
-      //     _limit: 5
-      //   }
-      // })
+      const resp = await axios.get(`${baseURL}?maxRecords=5`, config);
+      console.log(resp)
       setPizzas(resp.data.records);
     };
     getPizzas();
   }, [toggleFetch]);
 
     return (
-    <div>
-      <CreatedPizzaView pizzas={pizzas}/>
+    <div>{
+      pizzas.map((pizza, i)=>(
+        <CreatedPizzaView key={i} pizza={pizza}/>
+      ))
+    }
+      
     </div>
     )
 }
