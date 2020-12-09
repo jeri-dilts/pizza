@@ -15,7 +15,6 @@ function GalleryPage() {
 
     const getPizzas = async () => {
       const resp = await axios.get(`${baseURL}?maxRecords=5`, config);
-      console.log(resp)
       setPizzas(resp.data.records);
     };
     getPizzas();
