@@ -1,7 +1,6 @@
 .container{
   position: relative;
 }
-
 .cheesePizza{
     /* border: 1px solid red; */
     display: block;
@@ -24,17 +23,13 @@
     animation-duration: 4s;
   }
   .buttonStyle{
-    text-align: center;
     margin:0 auto; /* centers button */
     display:block; /* centers button */
-    margin-bottom: 50px;
   }
  .inputBox{
+    margin-bottom: 20px;
     text-align: center;
-    margin: 0 auto; /* centers button */
-    display: block; /* centers button */
  }
-
   .zoom{
     transition: transform .2s; /* Animation */
   }

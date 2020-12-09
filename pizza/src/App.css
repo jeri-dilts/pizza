@@ -19,8 +19,8 @@
   text-align: center;
   text-decoration: none;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10;
 }
 .sub_link:hover{
-  color: green;
+  text-decoration: underline;
 }
