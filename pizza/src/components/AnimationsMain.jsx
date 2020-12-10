@@ -9,7 +9,9 @@ function AnimationsMain(props) {
   // would like to destructure props for fun
 
   return (
-    <div className="placingToppings">
+
+    // conditional rendering
+    <div>
       {props.topping === "basil" && <BasilAnimation />}
       {props.topping === "blackOlives" && <BlackOliveAnimation />}
       {props.topping === "greenPepper" && <GreenPepperAnimation />}

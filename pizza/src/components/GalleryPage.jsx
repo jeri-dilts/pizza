@@ -13,8 +13,9 @@ function GalleryPage() {
     // will only run when things change
     useEffect(() => {
 
+    // query modified to get 5 latest pizzas
     const getPizzas = async () => {
-      const resp = await axios.get(`${baseURL}?maxRecords=5`, config);
+      const resp = await axios.get(`${baseURL}?maxRecords=5&&sort%5B0%5D%5Bfield%5D=createdTime&&sort%5B0%5D%5Bdirection%5D=desc`, config);
       setPizzas(resp.data.records);
     };
     getPizzas();

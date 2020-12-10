@@ -3,7 +3,8 @@ import AnimationsMain from "./AnimationsMain";
 
 function CreatedPizzaView(props){
     // console.log(props.pizza.fields);
-    return <div>
+    // I think this cheese pizza needs to only be rendered once in the component above
+    return <div> 
         <div className="container">
             <img
             className="cheesePizza"
@@ -15,7 +16,8 @@ function CreatedPizzaView(props){
             {props.pizza.fields.greenPepper && <AnimationsMain topping="greenPepper" />}
             {props.pizza.fields.mushrooms && <AnimationsMain topping="mushroom" />}
             {props.pizza.fields.pepperoni && <AnimationsMain topping="pepperoni" />}
-            {props.pizza.fields.pineapple && <AnimationsMain topping="pineapple" />}   
+            {props.pizza.fields.pineapple && <AnimationsMain topping="pineapple" />}
+            <div className="pizzaName">{props.pizza.fields.name}</div>
         </div>    
     </div>
 }
