@@ -35,10 +35,5 @@
 @media (max-width: 415px) {
   .pizzaName {
     font-size: 0.8em;
-    color: #551a8b;
-    margin-bottom: 10px;
-    font-weight: 900;
-    text-align: center;
-    font-family: "Open Sans", sans-serif;
   }
 }
