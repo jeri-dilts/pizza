@@ -1,32 +1,32 @@
 #pineapple_1 {
   position: absolute;
   opacity: 1;
-  top: 60%;
+  top: 50%;
   left: 38%;
 }
 #pineapple_2 {
   position: absolute;
   opacity: 1;
-  top: 26%;
-  left: 55%;
+  top: 22%;
+  left: 62%;
 }
 #pineapple_3 {
   position: absolute;
   opacity: 1;
-  top: 19%;
-  left: 41%;
+  top: 66%;
+  left: 52%;
 }
 #pineapple_4 {
   position: absolute;
   opacity: 1;
-  top: 31%;
+  top: 23%;
   left: 34%;
 }
 #pineapple_5 {
   position: absolute;
   opacity: 1;
-  top: 42%;
-  left: 63%;
+  top: 38%;
+  left: 70%;
 }
 .pineapple{
   width: 8%;
