@@ -124,7 +124,7 @@ function PizzaForm() {
             onClick={(e) => toggle(e, pizza.pineapple, "pineapple")}
           ></input>
         </div>
-        <div class="container">
+        <div className="container">
           <img
               className="cheesePizza"
               src={cheesePizza}

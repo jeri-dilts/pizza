@@ -23,7 +23,8 @@
     text-align: center;
     font-family: 'Open Sans', sans-serif;
 }
-.galleryButtonStyle>button{
-    /* margin: 0;
-    text-align: center; */
+.galleryButtonStyle{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
