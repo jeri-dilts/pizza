@@ -24,5 +24,6 @@
     font-family: 'Open Sans', sans-serif;
 }
 .galleryButtonStyle>button{
-    margin: 0;
+    /* margin: 0;
+    text-align: center; */
 }
