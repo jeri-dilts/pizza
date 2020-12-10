@@ -1,48 +1,61 @@
-.container{
+.container {
   position: relative;
 }
-.cheesePizza{
-    /* border: 1px solid red; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    height: 75%;
-    width: 75%
+.cheesePizza {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  height: 75%;
+  width: 75%;
+}
+.toppingsToggle {
+  text-align: center;
+  margin-top: 20px;
+}
+.singleToppingToggle {
+  display: inline;
+  margin-left: 20px;
+  margin-right: 20px;
+  animation-name: toppingSelected;
+  animation-duration: 4s;
+  height: 8%;
+  width: 8%;
+}
+.buttonStyle {
+  margin: 0 auto; /* centers button */
+  display: block; /* centers button */
+}
+.inputBox {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.zoom {
+  transition: transform 0.2s; /* Animation */
+}
+.zoom:hover {
+  transform: scale(
+    2.2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* ------------------------------------------------ Animations ---------- */
+@keyframes toppingSelected {
+  from {
+    transform: rotate(0deg);
   }
-  .toppingsToggle{
-    /* border: 1px solid red; */
-    text-align: center;
-    margin-top: 20px
+  to {
+    transform: rotate(360deg);
   }
-  .singleToppingToggle{
-    /* border: 1px solid red; */
-    display: inline;
-    margin-left: 20px;
-    margin-right: 20px;
-    animation-name: toppingSelected;
-    animation-duration: 4s;
-    height: 8%;
-    width: 8%
+}
+
+/* ------------------------------------------------ Media Query ---------- */
+/* All Iphones */
+
+@media (max-width: 415px) {
+  .singleToppingToggle {
+    margin-left: 10px;
+    margin-right: 10px;
   }
-  .buttonStyle{
-    margin:0 auto; /* centers button */
-    display:block; /* centers button */
-  }
- .inputBox{
-    margin-bottom: 20px;
-    text-align: center;
- }
-  .zoom{
-    transition: transform .2s; /* Animation */
-  }
-  .zoom:hover {
-    transform: scale(2.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-  
-  /* The animation code */
-  @keyframes toppingSelected {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
-  }
+}

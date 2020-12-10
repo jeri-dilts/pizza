@@ -14,7 +14,7 @@ function App() {
         <Route path="/see_what_people_are_ordering_now" component={GalleryPage} />
         <Route path="/order_confirmation" component={ConfirmationPage} />
       </Switch>
-      <footer className="footer">Coding by yours truly. Jeri Dilts.</footer>
+      <footer className="footer">Coding by yours truly. <i>Jeri Dilts.</i></footer>
     </div>
   );
 }

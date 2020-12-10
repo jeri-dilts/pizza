@@ -1,0 +1,196 @@
+/* -------------------------- BASIL -------------------------- */
+#basil_1 {
+  position: absolute;
+  opacity: 1;
+  top: 73%;
+  left: 34%;
+}
+#basil_2 {
+  position: absolute;
+  opacity: 1;
+  top: 20%;
+  left: 24%;
+}
+#basil_3 {
+  position: absolute;
+  opacity: 1;
+  top: 62%;
+  left: 62%;
+}
+#basil_4 {
+  position: absolute;
+  opacity: 1;
+  top: 45%;
+  left: 46%;
+}
+#basil_5 {
+  position: absolute;
+  opacity: 1;
+  top: 10%;
+  left: 51%;
+}
+
+/* -------------------------- BLACK OLIVES -------------------------- */
+#blackOlive_1 {
+  position: absolute;
+  opacity: 1;
+  top: 60%;
+  left: 32%; 
+}
+#blackOlive_2 {
+  position: absolute;
+  opacity: 1;
+  top: 38%;
+  left: 55%;
+}
+#blackOlive_3 {
+  position: absolute;
+  opacity: 1;
+  top: 74%;
+  left: 62%;
+}
+#blackOlive_4 {
+  position: absolute;
+  opacity: 1;
+  top: 32%;
+  left: 34%;
+}
+#blackOlive_5 {
+  position: absolute;
+  opacity: 1;
+  top: 17%;
+  left: 43%;
+}
+
+/* -------------------------- GREEN PEPPER -------------------------- */
+#greenPepper_1 {
+  position: absolute;
+  opacity: 1;
+  top: 34%;
+  left: 26%;
+}
+#greenPepper_2 {
+  position: absolute;
+  opacity: 1;
+  top: 10%;
+  left: 60%;
+}
+#greenPepper_3 {
+  position: absolute;
+  opacity: 1;
+  top: 33%;
+  left: 44%;
+}
+#greenPepper_4 {
+  position: absolute;
+  opacity: 1;
+  top: 54%;
+  left: 52%;
+}
+#greenPepper_5 {
+  position: absolute;
+  opacity: 1;
+  top: 80%;
+  left: 40%;
+}
+
+/* -------------------------- MUSHROOM -------------------------- */
+#mushroom_1 {
+  position: absolute;
+  opacity: 1;
+  top: 45%;
+  left: 30%;
+}
+#mushroom_2 {
+  position: absolute;
+  opacity: 1;
+  top: 47%;
+  left: 65%;
+}
+#mushroom_3 {
+  position: absolute;
+  opacity: 1;
+  top: 63%;
+  left: 70%;
+}
+#mushroom_4 {
+  position: absolute;
+  opacity: 1;
+  top: 27%;
+  left: 70%;
+}
+#mushroom_5 {
+  position: absolute;
+  opacity: 1;
+  top: 65%;
+  left: 22%;
+}
+
+/* -------------------------- PEPPERONI -------------------------- */
+#pepperoni_1 {
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left: 20%;
+}
+#pepperoni_2 {
+  position: absolute;
+  opacity: 1;
+  top: 79%;
+  left: 50%;
+}
+#pepperoni_3 {
+  position: absolute;
+  opacity: 1;
+  top: 10%;
+  left: 38%;
+}
+#pepperoni_4 {
+  position: absolute;
+  opacity: 1;
+  top: 59%;
+  left: 43%;
+}
+#pepperoni_5 {
+  position: absolute;
+  opacity: 1;
+  top: 24%;
+  left: 52%;
+}
+
+/* -------------------------- PINEAPPLE -------------------------- */
+#pineapple_1 {
+  position: absolute;
+  opacity: 1;
+  top: 50%;
+  left: 38%;
+}
+#pineapple_2 {
+  position: absolute;
+  opacity: 1;
+  top: 22%;
+  left: 62%;
+}
+#pineapple_3 {
+  position: absolute;
+  opacity: 1;
+  top: 66%;
+  left: 52%;
+}
+#pineapple_4 {
+  position: absolute;
+  opacity: 1;
+  top: 23%;
+  left: 34%;
+}
+#pineapple_5 {
+  position: absolute;
+  opacity: 1;
+  top: 38%;
+  left: 70%;
+}
+
+/* -------------------------- SIZE -------------------------- */
+.toppingSize{
+  width: 8%;
+}
