@@ -24,7 +24,15 @@ function CreatedPizzaView(props){
           ham: props.pizza.fields.ham,
         };
         await axios.post(baseURL, { fields }, config); // axios request
-        history.push("/order_confirmation")
+
+        const resp = await axios.get(
+            // query modified to get id of latest pizza
+            `${baseURL}?maxRecords=1&&sort%5B0%5D%5Bfield%5D=createdTime&&sort%5B0%5D%5Bdirection%5D=desc`,
+            config
+          );
+      
+          let id = resp.data.records[0].id;
+          history.push(`/order_confirmation=${id}`)
     };
 
     return <div> 
