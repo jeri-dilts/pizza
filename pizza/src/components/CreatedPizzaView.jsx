@@ -15,6 +15,9 @@ function CreatedPizzaView(props){
             {props.pizza.fields.pineapple && <AnimationsMain topping="pineapple" />}
             <div className="pizzaNameContainer">
                 <div className="pizzaName">{props.pizza.fields.name}</div>
+                <button className="buttonStyle" type="submit">
+                    Order Now!
+                </button>
             </div>
         </div>    
     </div>
