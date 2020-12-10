@@ -3,7 +3,7 @@ import "../css/CreatedPizzaView.css";
 import cheesePizza from "../img/cheesePizzaCropped.png";
 import axios from "axios";
 import { baseURL, config } from "../services";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function CreatedPizzaView(props){
 

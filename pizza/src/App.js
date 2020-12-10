@@ -12,7 +12,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={PizzaForm} />
         <Route path="/see_what_people_are_ordering_now" component={GalleryPage} />
-        <Route path="/order_confirmation" component={ConfirmationPage} />
+        <Route path="/order_confirmation=:id" component={ConfirmationPage} />
       </Switch>
       <footer className="footer">Coding by yours truly. <i>Jeri Dilts.</i></footer>
     </div>
