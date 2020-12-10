@@ -1,8 +1,22 @@
 .container{
     position: relative;
 }
-.pizzaName{
+.pizzaNameContainer{
     position: absolute;
-    top: 73%;
-    left: 34%;
+    top: 65%;
+    z-index: 1;
+    left: 50%;
+    /* enables centering an absolute positioned div without knowing the width */
+    transform: translateX(-50%);
+}
+.pizzaName{
+    background-color: white;
+    font-size: 25px;
+    color: #551a8b;
+    padding: 5px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
 }
