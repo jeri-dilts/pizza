@@ -9,6 +9,7 @@
   font-size: 5.5em;
   text-align: center;
   text-decoration: none;
+  color: #551a8b;
 }
 .sub_link>h3{
   margin: 0;
@@ -20,6 +21,7 @@
   text-decoration: none;
   margin-top: 0;
   margin-bottom: 10;
+  color: #551a8b;
 }
 .sub_link:hover{
   text-decoration: underline;
