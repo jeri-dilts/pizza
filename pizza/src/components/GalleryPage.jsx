@@ -25,7 +25,7 @@ function GalleryPage() {
   return (
     <div>
       {pizzas.map((pizza, i) => (
-        <CreatedPizzaView key={i} pizza={pizza} />
+        <CreatedPizzaView key={i} pizza={pizza} setToggleFetch={setToggleFetch}/>
       ))}
     </div>
   );
